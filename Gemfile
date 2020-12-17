@@ -41,7 +41,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #handling cors api
 gem 'rack-cors'
 
-gem 'jwt'
+#knock gem for auth api security
+gem 'knock'
 
 #provide fake data
 gem 'faker'
@@ -51,6 +52,9 @@ gem 'fast_jsonapi'
 
 #pagination
 #gem 'kaminari'
+
+#for unique id
+gem 'friendly_id'
 
 # redis to use cache
 gem 'redis'
@@ -63,4 +67,3 @@ gem 'bcrypt'
 
 #for realtime feature
 gem "anycable-rails"
-

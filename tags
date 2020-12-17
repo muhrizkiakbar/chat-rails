@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+ApiController	app/controllers/api_controller.rb	/^class ApiController < ApplicationController$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:ChatRails
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::API$/;"	c
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	module:ApplicationCable
+ChatRails	config/application.rb	/^module ChatRails$/;"	m
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	module:ApplicationCable
+ConnectionTest	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c	module:ApplicationCable
+CreateUsers	db/migrate/20201217050309_create_users.rb	/^class CreateUsers < ActiveRecord::Migration[6.0]$/;"	c
+README	README.md	/^# README$/;"	c
+TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	module:ActiveSupport
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+UserTokenController	app/controllers/api/v1/user_token_controller.rb	/^class Api::V1::UserTokenController < Knock::AuthTokenController$/;"	c	module:Api.V1
+activate_bundler	bin/bundle	/^  def activate_bundler$/;"	f
+activation_error_handling	bin/bundle	/^  def activation_error_handling$/;"	f
+bundler_requirement	bin/bundle	/^  def bundler_requirement$/;"	f
+bundler_version	bin/bundle	/^  def bundler_version$/;"	f
+change	db/migrate/20201217050309_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+chat-rails	README.md	/^# chat-rails$/;"	c
+cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
+default	config/database.yml	/^default: &default$/;"	a
+entity_name	app/controllers/api/v1/user_token_controller.rb	/^  def entity_name$/;"	f	class:UserTokenController
+env_var_version	bin/bundle	/^  def env_var_version$/;"	f
+from_token_request	app/models/user.rb	/^  def self.from_token_request request$/;"	S	class:User
+gemfile	bin/bundle	/^  def gemfile$/;"	f
+invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
+load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
+lockfile	bin/bundle	/^  def lockfile$/;"	f
+lockfile_version	bin/bundle	/^  def lockfile_version$/;"	f
+set_default_format	app/controllers/api_controller.rb	/^  def set_default_format$/;"	f	class:ApiController
+system!	bin/setup	/^def system!(*args)$/;"	f
+to_token_payload	app/models/user.rb	/^  def to_token_payload$/;"	f	class:User
