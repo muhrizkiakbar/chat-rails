@@ -8,30 +8,54 @@ module MessagesServices
     end
 
     def call
-      conversation_exist
+      if conversation_exist
+        send(@conversation, @user_sender)
+      else
+        add_conversation
+      end
     end
 
     def conversation_exist
       conversation_from_sender = @user_sender.conversations.pluck(:"conversations.id")
+
+      result = false
+
+      conversation_from_sender.each do |conversation|
+        conversation_check_user = UserConversation.where(conversation_id: conversation).where(user_id: @user_recipient.id).first
+        
+        if conversation_check_user != nil
+          @conversation = conversation_check_user
+          result = true
+          break
+        end
+
+      end
+      
+      return result
     end
 
     def add_conversation
-      conversation = Conversation.create()
-      user_conversation_sender = UserConversation.create({
+      conversation = Conversation.create({})
+
+
+      UserConversation.create({
         user: @user_sender,
         conversation: conversation
       })
-      user_conversation_recipient = UserConversation.create({
+
+      UserConversation.create({
         user: @user_recipient,
         conversation: conversation
       })
+
+      send(conversation, @user_sender)
     end
 
-    def send
+    def send conversation, user
       Message.create({
         conversation: conversation,
         user: user,
-        message: message
+        message: @message
       })
     end
 

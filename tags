@@ -6,7 +6,6 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
-AddMessageToConversation	db/migrate/20201217063513_add_message_to_conversation.rb	/^class AddMessageToConversation < ActiveRecord::Migration[6.0]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:ChatRails
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
@@ -21,23 +20,24 @@ Connection	app/channels/application_cable/connection.rb	/^  class Connection < A
 ConnectionTest	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c	module:ApplicationCable
 Conversation	app/models/conversation.rb	/^class Conversation < ApplicationRecord$/;"	c
 ConversationController	app/controllers/api/v1/ConversationController.rb	/^class Api::V1::ConversationController < ApplicationController$/;"	c	module:Api.V1
-ConversationSerializer	app/serializers/conversation_serializer.rb	/^class ConversationSerializer < ActiveModel::Serializer$/;"	c
+ConversationSerializer	app/serializers/conversation_serializer.rb	/^class ConversationSerializer$/;"	c
 ConversationTest	test/models/conversation_test.rb	/^class ConversationTest < ActiveSupport::TestCase$/;"	c
 CreateConversations	db/migrate/20201217063223_create_conversations.rb	/^class CreateConversations < ActiveRecord::Migration[6.0]$/;"	c
 CreateMessages	db/migrate/20201217063330_create_messages.rb	/^class CreateMessages < ActiveRecord::Migration[6.0]$/;"	c
+CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/^class CreateUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
 Message	app/models/message.rb	/^class Message < ApplicationRecord$/;"	c
-Message	app/services/messages/send_message.rb	/^module Message$/;"	m
 MessageController	app/controllers/api/v1/MessageController.rb	/^class Api::V1::MessageController < ApplicationController$/;"	c	module:Api.V1
 MessageTest	test/models/message_test.rb	/^class MessageTest < ActiveSupport::TestCase$/;"	c
 MessagesServices	app/services/messages_services/send_message.rb	/^module MessagesServices$/;"	m
 README	README.md	/^# README$/;"	c
-SendMessage	app/services/messages/send_message.rb	/^  class SendMessage < ApplicationService$/;"	c	module:Message
 SendMessage	app/services/messages_services/send_message.rb	/^  class SendMessage < ApplicationService$/;"	c	module:MessagesServices
 TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	module:ActiveSupport
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserController	app/controllers/api/v1/UserController.rb	/^class Api::V1::UserController < ApplicationController$/;"	c	module:Api.V1
 UserConversation	app/models/user_conversation.rb	/^class UserConversation < ApplicationRecord$/;"	c
+UserConversationSerializer	app/serializers/user_conversation_serializer.rb	/^class UserConversationSerializer$/;"	c
+UserConversationTest	test/models/user_conversation_test.rb	/^class UserConversationTest < ActiveSupport::TestCase$/;"	c
 UserSerializer	app/serializers/user_serializer.rb	/^class UserSerializer$/;"	c
 activate_bundler	bin/bundle	/^  def activate_bundler$/;"	f
 activation_error_handling	bin/bundle	/^  def activation_error_handling$/;"	f
@@ -45,14 +45,12 @@ add_conversation	app/services/messages_services/send_message.rb	/^    def add_co
 bundler_requirement	bin/bundle	/^  def bundler_requirement$/;"	f
 bundler_version	bin/bundle	/^  def bundler_version$/;"	f
 call	app/services/application_service.rb	/^  def self.call(*args, &block)                                                                  /;"	S	class:ApplicationService
-call	app/services/messages/send_message.rb	/^    def call$/;"	f	class:Message.SendMessage
 call	app/services/messages_services/send_message.rb	/^    def call$/;"	f	class:MessagesServices.SendMessage
 change	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^  def change$/;"	f	class:DeviseTokenAuthCreateUsers
 change	db/migrate/20201217063223_create_conversations.rb	/^  def change$/;"	f	class:CreateConversations
 change	db/migrate/20201217063330_create_messages.rb	/^  def change$/;"	f	class:CreateMessages
-change	db/migrate/20201217063513_add_message_to_conversation.rb	/^  def change$/;"	f	class:AddMessageToConversation
+change	db/migrate/20201217112351_create_user_conversations.rb	/^  def change$/;"	f	class:CreateUserConversations
 cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
-conversation_exist	app/services/messages/send_message.rb	/^    def conversation_exist$/;"	f	class:Message.SendMessage
 conversation_exist	app/services/messages_services/send_message.rb	/^    def conversation_exist$/;"	f	class:MessagesServices.SendMessage
 create	app/controllers/api/v1/MessageController.rb	/^  def create$/;"	f	class:MessageController
 default	config/database.yml	/^default: &default$/;"	a
@@ -60,13 +58,12 @@ env_var_version	bin/bundle	/^  def env_var_version$/;"	f
 gemfile	bin/bundle	/^  def gemfile$/;"	f
 index	app/controllers/api/v1/ConversationController.rb	/^  def index$/;"	f	class:ConversationController
 index	app/controllers/api/v1/UserController.rb	/^  def index$/;"	f	class:UserController
-initialize	app/services/messages/send_message.rb	/^    def initialize user_sender, user_recipient$/;"	f	class:Message.SendMessage
 initialize	app/services/messages_services/send_message.rb	/^    def initialize user_sender, user_recipient, message$/;"	f	class:MessagesServices.SendMessage
 invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
 load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
 lockfile	bin/bundle	/^  def lockfile$/;"	f
 lockfile_version	bin/bundle	/^  def lockfile_version$/;"	f
 message_params	app/controllers/api/v1/MessageController.rb	/^  def message_params$/;"	f	class:MessageController
-send	app/services/messages_services/send_message.rb	/^    def send$/;"	f	class:MessagesServices.SendMessage
+send	app/services/messages_services/send_message.rb	/^    def send conversation, user$/;"	f	class:MessagesServices.SendMessage
 set_params_url	app/controllers/api/v1/MessageController.rb	/^  def set_params_url$/;"	f	class:MessageController
 system!	bin/setup	/^def system!(*args)$/;"	f

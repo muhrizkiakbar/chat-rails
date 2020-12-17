@@ -3,7 +3,12 @@ class Api::V1::MessageController < ApplicationController
   before_action :set_params_url, only: [:create]
 
   def create
-    @send_message = MessagesServices::SendMessage.call(current_api_user, @user)
+    puts params[:message]
+    puts params
+    puts current_api_user
+    puts "*" * 100
+    @send_message = MessagesServices::SendMessage.call(current_api_user, @user, params[:message])
+    render json: "tes"
   end
 
   private
@@ -13,6 +18,7 @@ class Api::V1::MessageController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:message)
+    #params.require(:message).permit(:message)
+    params[:message]
   end
 end
