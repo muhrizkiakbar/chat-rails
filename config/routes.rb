@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     end
     namespace :v1 do
       get '/conversations' => "conversation#index", as: "conversations"
+      get '/conversation/:conversation_id' => "conversation#show", as: "conversation"
       get '/users' => "user#index", as: "users"
       post '/send_message/:user_id' => "message#create", as: "send_message"
     end

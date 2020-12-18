@@ -3,4 +3,5 @@ class ConversationSerializer
   attributes :id
 
   has_many :users, serializer: :user
+  has_many :messages
 end

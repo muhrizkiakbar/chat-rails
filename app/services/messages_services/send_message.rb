@@ -24,7 +24,7 @@ module MessagesServices
         conversation_check_user = UserConversation.where(conversation_id: conversation).where(user_id: @user_recipient.id).first
         
         if conversation_check_user != nil
-          @conversation = conversation_check_user
+          @conversation = conversation_check_user.conversation
           result = true
           break
         end

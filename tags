@@ -28,6 +28,7 @@ CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
 Message	app/models/message.rb	/^class Message < ApplicationRecord$/;"	c
 MessageController	app/controllers/api/v1/MessageController.rb	/^class Api::V1::MessageController < ApplicationController$/;"	c	module:Api.V1
+MessageSerializer	app/serializers/message_serializer.rb	/^class MessageSerializer$/;"	c
 MessageTest	test/models/message_test.rb	/^class MessageTest < ActiveSupport::TestCase$/;"	c
 MessagesServices	app/services/messages_services/send_message.rb	/^module MessagesServices$/;"	m
 README	README.md	/^# README$/;"	c
@@ -63,7 +64,8 @@ invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
 load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
 lockfile	bin/bundle	/^  def lockfile$/;"	f
 lockfile_version	bin/bundle	/^  def lockfile_version$/;"	f
-message_params	app/controllers/api/v1/MessageController.rb	/^  def message_params$/;"	f	class:MessageController
 send	app/services/messages_services/send_message.rb	/^    def send conversation, user$/;"	f	class:MessagesServices.SendMessage
+set_params_url	app/controllers/api/v1/ConversationController.rb	/^  def set_params_url$/;"	f	class:ConversationController
 set_params_url	app/controllers/api/v1/MessageController.rb	/^  def set_params_url$/;"	f	class:MessageController
+show	app/controllers/api/v1/ConversationController.rb	/^  def show$/;"	f	class:ConversationController
 system!	bin/setup	/^def system!(*args)$/;"	f
