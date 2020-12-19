@@ -28,8 +28,9 @@ List of gem that i use
 
 ```
 
+## FYI
 I make service object to for Logic of Sending Message.
-If markonah never send message to udinner then make new conversation, if not markonah will use current conversation of udinner.
+If markonah never send message to daniel then make new conversation, if not markonah will use current conversation of udinner.
 
 # Lets Get Started It!
 
@@ -53,7 +54,7 @@ If markonah never send message to udinner then make new conversation, if not mar
 ## Sign In (You must!)
 I was add fake data for 2 users
 ```email: "markonah@mail.com" ---- password: "password123"```
-```email: "udinners@mail.com" ---- password: "password123"```
+```email: "daniel@zemlak.io" ---- password: "password123"```
 
 ```curl -X POST -H 'Content-Type: application/json' -i 'http://10.221.104.165:3000/api/v1/auth/sign_in' --data '{"email":"daniel@zemlak.io","password":"password123"}'```
 

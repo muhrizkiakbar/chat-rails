@@ -28,6 +28,7 @@ CreateMessages	db/migrate/20201217063330_create_messages.rb	/^class CreateMessag
 CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/^class CreateUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
 Endpoints	README.md	/^# Endpoints$/;"	c
+FYI	README.md	/^## FYI$/;"	s
 Get Conversation of User and Change unread message to readed is true	README.md	/^## Get Conversation of User and Change unread message to readed is true$/;"	s
 Get Conversations and count unread message and preview that message from Users	README.md	/^## Get Conversations and count unread message and preview that message from Users$/;"	s
 Get Users	README.md	/^## Get Users$/;"	s
