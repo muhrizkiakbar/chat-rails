@@ -28,9 +28,9 @@ CreateMessages	db/migrate/20201217063330_create_messages.rb	/^class CreateMessag
 CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/^class CreateUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
 Endpoints	README.md	/^# Endpoints$/;"	c
-Get Conversation of User and Change unread message to readed is true	README.md	/^# Get Conversation of User and Change unread message to readed is true$/;"	c
-Get Conversations and count unread message and preview that message from Users	README.md	/^# Get Conversations and count unread message and preview that message from Users$/;"	c
-Get Users	README.md	/^# Get Users$/;"	c
+Get Conversation of User and Change unread message to readed is true	README.md	/^## Get Conversation of User and Change unread message to readed is true$/;"	s
+Get Conversations and count unread message and preview that message from Users	README.md	/^## Get Conversations and count unread message and preview that message from Users$/;"	s
+Get Users	README.md	/^## Get Users$/;"	s
 Instalation	README.md	/^## Instalation$/;"	s
 Lets Get Started It!	README.md	/^# Lets Get Started It!$/;"	c
 Message	app/models/message.rb	/^class Message < ApplicationRecord$/;"	c
@@ -47,9 +47,9 @@ MessagesServices	app/services/messages_services/send_message.rb	/^module Message
 Migrate Database	README.md	/^## Migrate Database$/;"	s
 README	README.md	/^# README$/;"	c
 Run App	README.md	/^## Run App$/;"	s
-Search User	README.md	/^# Search User$/;"	c
+Search User	README.md	/^## Search User$/;"	s
 Seed Database	README.md	/^## Seed Database$/;"	s
-Send Message To User	README.md	/^# Send Message To User$/;"	c
+Send Message To User	README.md	/^## Send Message To User$/;"	s
 SendMessage	app/services/messages_services/send_message.rb	/^  class SendMessage < ApplicationService$/;"	c	module:MessagesServices
 Setup Database	README.md	/^## Setup Database$/;"	s
 Sign In (You must!)	README.md	/^## Sign In (You must!)$/;"	s
