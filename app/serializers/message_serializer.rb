@@ -1,7 +1,6 @@
 class MessageSerializer
   include JSONAPI::Serializer
-  attributes :message
+  attributes :message, :readed
 
-  belongs_to :conversation
   belongs_to :user
 end

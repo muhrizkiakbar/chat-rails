@@ -10,13 +10,10 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
+class Conversations::MessageSerializer
+  include JSONAPI::Serializer
+  attributes :message, :readed
 
-one:
-  conversation: one
-  user: one
-  message: MyText
-
-two:
-  conversation: two
-  user: two
-  message: MyText
+  #belongs_to :conversation
+  belongs_to :user, serializer: Conversations::UserSerializer
+end

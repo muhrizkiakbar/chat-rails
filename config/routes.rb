@@ -5,10 +5,11 @@ Rails.application.routes.draw do
     end
     namespace :v1 do
       get '/conversations' => "conversation#index", as: "conversations"
-      get '/conversation/:conversation_id' => "conversation#show", as: "conversation"
+      get '/conversations/:conversation_id' => "conversation#show", as: "conversation"
       get '/users' => "user#index", as: "users"
       post '/send_message/:user_id' => "message#create", as: "send_message"
     end
   end
+  mount ActionCable.server => '/cable'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

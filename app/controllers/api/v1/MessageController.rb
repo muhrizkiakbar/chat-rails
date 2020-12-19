@@ -5,9 +5,9 @@ class Api::V1::MessageController < ApplicationController
   def create
     @send_message = MessagesServices::SendMessage.call(current_api_user, @user, params[:message])
     if @send_message
-      render jsonapi: @send_message, include: [:user]
+      render json: MessageSerializer.new(@send_message)
     else
-      render jsonapi_errors: @send_message.errors, status: :unprocessable_entity
+      render jsonapi_errors: @send_message, status: :unprocessable_entity
     end
   end
 

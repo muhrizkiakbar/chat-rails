@@ -20,29 +20,51 @@ Connection	app/channels/application_cable/connection.rb	/^  class Connection < A
 ConnectionTest	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c	module:ApplicationCable
 Conversation	app/models/conversation.rb	/^class Conversation < ApplicationRecord$/;"	c
 ConversationController	app/controllers/api/v1/ConversationController.rb	/^class Api::V1::ConversationController < ApplicationController$/;"	c	module:Api.V1
-ConversationSerializer	app/serializers/conversation_serializer.rb	/^class ConversationSerializer$/;"	c
+ConversationSerializer	app/serializers/conversation_serializer.rb	/^  class ConversationSerializer$/;"	c
+ConversationSerializer	app/serializers/conversations/conversation_serializer.rb	/^class Conversations::ConversationSerializer$/;"	c	module:Conversations
 ConversationTest	test/models/conversation_test.rb	/^class ConversationTest < ActiveSupport::TestCase$/;"	c
 CreateConversations	db/migrate/20201217063223_create_conversations.rb	/^class CreateConversations < ActiveRecord::Migration[6.0]$/;"	c
 CreateMessages	db/migrate/20201217063330_create_messages.rb	/^class CreateMessages < ActiveRecord::Migration[6.0]$/;"	c
 CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/^class CreateUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
+Endpoints	README.md	/^# Endpoints$/;"	c
+Get Conversation of User and Change unread message to readed is true	README.md	/^# Get Conversation of User and Change unread message to readed is true$/;"	c
+Get Conversations and count unread message and preview that message from Users	README.md	/^# Get Conversations and count unread message and preview that message from Users$/;"	c
+Get Users	README.md	/^# Get Users$/;"	c
+Instalation	README.md	/^## Instalation$/;"	s
+Lets Get Started It!	README.md	/^# Lets Get Started It!$/;"	c
 Message	app/models/message.rb	/^class Message < ApplicationRecord$/;"	c
+MessageBroadCastJob	app/jobs/message_broad_cast_job.rb	/^class MessageBroadCastJob < ApplicationJob$/;"	c
+MessageBroadCastJobTest	test/jobs/message_broad_cast_job_test.rb	/^class MessageBroadCastJobTest < ActiveJob::TestCase$/;"	c
+MessageChannel	app/channels/message_channel.rb	/^class MessageChannel < ApplicationCable::Channel$/;"	c
+MessageChannelTest	test/channels/message_channel_test.rb	/^class MessageChannelTest < ActionCable::Channel::TestCase$/;"	c
 MessageController	app/controllers/api/v1/MessageController.rb	/^class Api::V1::MessageController < ApplicationController$/;"	c	module:Api.V1
+MessageController	app/controllers/api/v1/conversations/MessageController.rb	/^class Api::V1::Conversations::MessageController < ApplicationController$/;"	c	module:Api.V1.Conversations
+MessageSerializer	app/serializers/conversations/message_serializer.rb	/^class Conversations::MessageSerializer$/;"	c	module:Conversations
 MessageSerializer	app/serializers/message_serializer.rb	/^class MessageSerializer$/;"	c
 MessageTest	test/models/message_test.rb	/^class MessageTest < ActiveSupport::TestCase$/;"	c
 MessagesServices	app/services/messages_services/send_message.rb	/^module MessagesServices$/;"	m
+Migrate Database	README.md	/^## Migrate Database$/;"	s
 README	README.md	/^# README$/;"	c
+Run App	README.md	/^## Run App$/;"	s
+Search User	README.md	/^# Search User$/;"	c
+Seed Database	README.md	/^## Seed Database$/;"	s
+Send Message To User	README.md	/^# Send Message To User$/;"	c
 SendMessage	app/services/messages_services/send_message.rb	/^  class SendMessage < ApplicationService$/;"	c	module:MessagesServices
+Setup Database	README.md	/^## Setup Database$/;"	s
+Sign In (You must!)	README.md	/^## Sign In (You must!)$/;"	s
 TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	module:ActiveSupport
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserController	app/controllers/api/v1/UserController.rb	/^class Api::V1::UserController < ApplicationController$/;"	c	module:Api.V1
 UserConversation	app/models/user_conversation.rb	/^class UserConversation < ApplicationRecord$/;"	c
 UserConversationSerializer	app/serializers/user_conversation_serializer.rb	/^class UserConversationSerializer$/;"	c
 UserConversationTest	test/models/user_conversation_test.rb	/^class UserConversationTest < ActiveSupport::TestCase$/;"	c
+UserSerializer	app/serializers/conversations/user_serializer.rb	/^  class Conversations::UserSerializer$/;"	c	module:Conversations
 UserSerializer	app/serializers/user_serializer.rb	/^class UserSerializer$/;"	c
 activate_bundler	bin/bundle	/^  def activate_bundler$/;"	f
 activation_error_handling	bin/bundle	/^  def activation_error_handling$/;"	f
 add_conversation	app/services/messages_services/send_message.rb	/^    def add_conversation$/;"	f	class:MessagesServices.SendMessage
+build_conversation	app/jobs/message_broad_cast_job.rb	/^  def build_conversation(id)$/;"	f	class:MessageBroadCastJob
 bundler_requirement	bin/bundle	/^  def bundler_requirement$/;"	f
 bundler_version	bin/bundle	/^  def bundler_version$/;"	f
 call	app/services/application_service.rb	/^  def self.call(*args, &block)                                                                  /;"	S	class:ApplicationService
@@ -52,11 +74,18 @@ change	db/migrate/20201217063223_create_conversations.rb	/^  def change$/;"	f	cl
 change	db/migrate/20201217063330_create_messages.rb	/^  def change$/;"	f	class:CreateMessages
 change	db/migrate/20201217112351_create_user_conversations.rb	/^  def change$/;"	f	class:CreateUserConversations
 cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
+connect	app/channels/application_cable/connection.rb	/^    def connect$/;"	f	class:ApplicationCable.Connection
 conversation_exist	app/services/messages_services/send_message.rb	/^    def conversation_exist$/;"	f	class:MessagesServices.SendMessage
 create	app/controllers/api/v1/MessageController.rb	/^  def create$/;"	f	class:MessageController
+create	app/controllers/api/v1/conversations/MessageController.rb	/^  def create$/;"	f	class:MessageController
+default	config/anycable.yml	/^default: &default$/;"	a
 default	config/database.yml	/^default: &default$/;"	a
+destroy	app/controllers/api/v1/ConversationController.rb	/^  def destroy$/;"	f	class:ConversationController
 env_var_version	bin/bundle	/^  def env_var_version$/;"	f
+find_verified_user	app/channels/application_cable/connection.rb	/^    def find_verified_user$/;"	f	class:ApplicationCable.Connection
 gemfile	bin/bundle	/^  def gemfile$/;"	f
+get_convo	app/channels/message_channel.rb	/^  def get_convo(conversation)$/;"	f	class:MessageChannel
+get_sender	app/channels/message_channel.rb	/^  def get_sender(user)$/;"	f	class:MessageChannel
 index	app/controllers/api/v1/ConversationController.rb	/^  def index$/;"	f	class:ConversationController
 index	app/controllers/api/v1/UserController.rb	/^  def index$/;"	f	class:UserController
 initialize	app/services/messages_services/send_message.rb	/^    def initialize user_sender, user_recipient, message$/;"	f	class:MessagesServices.SendMessage
@@ -64,8 +93,14 @@ invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
 load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
 lockfile	bin/bundle	/^  def lockfile$/;"	f
 lockfile_version	bin/bundle	/^  def lockfile_version$/;"	f
+perform	app/jobs/message_broad_cast_job.rb	/^  def perform(message)$/;"	f	class:MessageBroadCastJob
 send	app/services/messages_services/send_message.rb	/^    def send conversation, user$/;"	f	class:MessagesServices.SendMessage
 set_params_url	app/controllers/api/v1/ConversationController.rb	/^  def set_params_url$/;"	f	class:ConversationController
 set_params_url	app/controllers/api/v1/MessageController.rb	/^  def set_params_url$/;"	f	class:MessageController
+set_params_url	app/controllers/api/v1/conversations/MessageController.rb	/^  def set_params_url$/;"	f	class:MessageController
 show	app/controllers/api/v1/ConversationController.rb	/^  def show$/;"	f	class:ConversationController
+speak	app/channels/message_channel.rb	/^  def speak(data)$/;"	f	class:MessageChannel
+subscribed	app/channels/message_channel.rb	/^  def subscribed$/;"	f	class:MessageChannel
 system!	bin/setup	/^def system!(*args)$/;"	f
+unread_message	app/models/conversation.rb	/^  def unread_message(object)$/;"	f	class:Conversation
+unsubscribed	app/channels/message_channel.rb	/^  def unsubscribed$/;"	f	class:MessageChannel

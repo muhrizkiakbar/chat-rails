@@ -10,8 +10,10 @@ module MessagesServices
     def call
       if conversation_exist
         send(@conversation, @user_sender)
+        return @result_message
       else
         add_conversation
+        return @result_message
       end
     end
 
@@ -52,7 +54,7 @@ module MessagesServices
     end
 
     def send conversation, user
-      Message.create({
+      @result_message = Message.create({
         conversation: conversation,
         user: user,
         message: @message

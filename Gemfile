@@ -53,11 +53,9 @@ gem 'rack-cors'
 gem 'faker'
 
 #serialize data api
-gem 'jsonapi.rb'
 gem 'jsonapi-serializer'
+gem 'jsonapi.rb'
 
-#pagination
-#gem 'kaminari'
 
 # redis to use cache
 gem 'redis'
