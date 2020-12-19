@@ -31,6 +31,7 @@ List of gem that i use
 ## FYI
 I make service object to for Logic of Sending Message.
 If markonah never send message to daniel then make new conversation, if not markonah will use current conversation of udinner.
+Change database.yml base on your config
 
 # Lets Get Started It!
 
