@@ -16,3 +16,16 @@ puts "Create User"
     password: "password123"
   })
 end
+
+User.create({
+  email: "markonah@mail.com",
+  nickname: "sakura",
+  name: "sakura roof",
+  password: "password123"
+})
+User.create({
+  email: "daniela@zemlak.io",
+  nickname: "danila",
+  name: "danila mananta",
+  password: "password123"
+})
