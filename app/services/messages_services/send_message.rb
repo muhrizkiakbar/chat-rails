@@ -59,6 +59,8 @@ module MessagesServices
         user: user,
         message: @message
       })
+      puts @result_message.errors.full_messages
+      puts "#" * 100
     end
 
   end

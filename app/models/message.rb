@@ -15,6 +15,8 @@ class Message < ApplicationRecord
   belongs_to :conversation
   belongs_to :user
 
+  validates :message, presence: true
+
   #after_create_commit :send_channel
   #after_create_commit{ MessageBroadCastJob.perform_later(self) }
 
