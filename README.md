@@ -66,11 +66,13 @@ I was add fake data for 2 users
 ```curl -X GET -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -i 'http://10.221.104.165:3000/api/v1/users/?filter[email_or_name_cont_any]=fausto,name\&sort=-email,name'```
 
 ## Send Message To User
-```curl -X POST -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -i 'http://10.221.104.165:3000/api/v1/send_message/4' --data '{"message":"masuk pak eko"}'```
+`:id` is value of slug of attribute user
+```curl -X POST -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -i 'http://10.221.104.165:3000/api/v1/send_message/:id' --data '{"message":"masuk pak eko"}'```
 
 ## Get Conversations and count unread message and preview that message from Users
 ```curl -X GET -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -i 'http://10.221.104.165:3000/api/v1/conversations'```
 
 ## Get Conversation of User and Change unread message to readed is true
-```curl -X GET -H 'uid: daniela@zemlak.io' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -H 'Content-Type: application/json' -i 'http://10.221.104.165:3000/api/v1/conversations/1'```
+`:id` is value of slug of attribute conversation
+```curl -X GET -H 'uid: daniela@zemlak.io' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -H 'Content-Type: application/json' -i 'http://10.221.104.165:3000/api/v1/conversations/:id'```
 

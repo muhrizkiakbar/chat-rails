@@ -6,6 +6,10 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+AddSlugToConversation	db/migrate/20210112081715_add_slug_to_conversation.rb	/^class AddSlugToConversation < ActiveRecord::Migration[6.0]$/;"	c
+AddSlugToMessage	db/migrate/20210112081728_add_slug_to_message.rb	/^class AddSlugToMessage < ActiveRecord::Migration[6.0]$/;"	c
+AddSlugToUser	db/migrate/20210112081522_add_slug_to_user.rb	/^class AddSlugToUser < ActiveRecord::Migration[6.0]$/;"	c
+AddSlugToUserConversations	db/migrate/20210112081747_add_slug_to_user_conversations.rb	/^class AddSlugToUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:ChatRails
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
@@ -28,7 +32,6 @@ CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
 Endpoints	README.md	/^# Endpoints$/;"	c
 FYI	README.md	/^## FYI$/;"	s
-FriendlyId	app/models/concerns/friendly_id.rb	/^module FriendlyId$/;"	m
 Get Conversation of User and Change unread message to readed is true	README.md	/^## Get Conversation of User and Change unread message to readed is true$/;"	s
 Get Conversations and count unread message and preview that message from Users	README.md	/^## Get Conversations and count unread message and preview that message from Users$/;"	s
 Get Users	README.md	/^## Get Users$/;"	s
@@ -72,6 +75,10 @@ change	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^  def chang
 change	db/migrate/20201217063223_create_conversations.rb	/^  def change$/;"	f	class:CreateConversations
 change	db/migrate/20201217063330_create_messages.rb	/^  def change$/;"	f	class:CreateMessages
 change	db/migrate/20201217112351_create_user_conversations.rb	/^  def change$/;"	f	class:CreateUserConversations
+change	db/migrate/20210112081522_add_slug_to_user.rb	/^  def change$/;"	f	class:AddSlugToUser
+change	db/migrate/20210112081715_add_slug_to_conversation.rb	/^  def change$/;"	f	class:AddSlugToConversation
+change	db/migrate/20210112081728_add_slug_to_message.rb	/^  def change$/;"	f	class:AddSlugToMessage
+change	db/migrate/20210112081747_add_slug_to_user_conversations.rb	/^  def change$/;"	f	class:AddSlugToUserConversations
 cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
 connect	app/channels/application_cable/connection.rb	/^    def connect$/;"	f	class:ApplicationCable.Connection
 conversation_exist	app/services/messages_services/send_message.rb	/^    def conversation_exist$/;"	f	class:MessagesServices.SendMessage
