@@ -12,7 +12,7 @@
 #
 class Conversations::MessageSerializer
   include JSONAPI::Serializer
-  attributes :message, :readed
+  attributes :message, :readed, :slug
 
   #belongs_to :conversation
   belongs_to :user, serializer: Conversations::UserSerializer

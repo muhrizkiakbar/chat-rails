@@ -1,6 +1,6 @@
 class Conversations::ConversationSerializer
   include JSONAPI::Serializer
-  attributes :id
+  attributes :id, :slug
 
   has_many :users, serializer: Conversations::UserSerializer, meta: Proc.new {|conversation_data, params| 
     #{:unread_message_count => conversation_data.unread_message(params[:current_api_user]).count} 

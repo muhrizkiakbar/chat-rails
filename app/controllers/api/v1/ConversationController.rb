@@ -29,6 +29,6 @@ class Api::V1::ConversationController < ApplicationController
 
 
   def set_params_url
-    @conversation = Conversation.find(params[:conversation_id])
+    @conversation = Conversation.friendly.find(params[:conversation_id])
   end
 end

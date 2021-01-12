@@ -28,7 +28,7 @@
 #
   class Conversations::UserSerializer
     include JSONAPI::Serializer
-    attributes :nickname, :name, :email
+    attributes :nickname, :name, :email, :slug
 
     #has_many :messages
   end

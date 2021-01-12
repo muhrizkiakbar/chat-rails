@@ -68,3 +68,5 @@ gem 'bcrypt'
 
 #for realtime feature
 gem "anycable-rails"
+
+gem 'friendly_id', '~> 5.4.0'

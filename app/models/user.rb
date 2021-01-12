@@ -28,13 +28,17 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
-class User < ActiveRecord::Base
+#class User < ActiveRecord::Base
+class User < ApplicationRecord
   extend Devise::Models
+  extend FriendlyId                                                                                                                                       
+  friendly_id :slug_candidates, use: :slugged
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
   include DeviseTokenAuth::Concerns::User
+
 
   has_many :user_conversations
   has_many :conversations, through: :user_conversations

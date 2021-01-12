@@ -12,6 +12,9 @@
 #
 class Message < ApplicationRecord
   self.default_scope {order('created_at ASC')}
+  extend FriendlyId                                                                                                                                       
+  friendly_id :slug_candidates, use: :slugged
+
   belongs_to :conversation
   belongs_to :user
 

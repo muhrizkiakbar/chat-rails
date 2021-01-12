@@ -9,6 +9,8 @@
 #  updated_at      :datetime         not null
 #
 class UserConversation < ApplicationRecord
+  extend FriendlyId                                                                                                                                       
+  friendly_id :slug_candidates, use: :slugged
   belongs_to :user
   belongs_to :conversation
 end

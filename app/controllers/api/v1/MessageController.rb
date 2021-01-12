@@ -14,7 +14,7 @@ class Api::V1::MessageController < ApplicationController
   private
   
   def set_params_url
-    @user = User.find(params[:user_id])
+    @user = User.friendly.find(params[:user_id])
   end
 
 end
