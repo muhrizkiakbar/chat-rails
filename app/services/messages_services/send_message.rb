@@ -18,19 +18,14 @@ module MessagesServices
     end
 
     def conversation_exist
-      conversation_from_sender = @user_sender.conversations.pluck(:"conversations.id")
 
       result = false
 
-      conversation_from_sender.each do |conversation|
-        conversation_check_user = UserConversation.where(conversation_id: conversation).where(user_id: @user_recipient.id).first
+      conversation_check_user = UserConversation.where(conversation_id: @user_sender.conversations.pluck(:"conversations.id")).where(user_id: @user_recipient.id).first
         
-        if conversation_check_user != nil
+      if !conversation_check_user.nil?
           @conversation = conversation_check_user.conversation
           result = true
-          break
-        end
-
       end
       
       return result
@@ -59,8 +54,11 @@ module MessagesServices
         user: user,
         message: @message
       })
-      puts @result_message.errors.full_messages
-      puts "#" * 100
+      
+      if !@conversation.nil?
+        change_updated_conversation = Conversation.find(conversation.id)
+        change_updated_conversation.touch
+      end
     end
 
   end

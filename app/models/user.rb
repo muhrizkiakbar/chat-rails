@@ -2,8 +2,7 @@
 
 # == Schema Information
 #
-# Table name: users
-#
+# Table name: users 
 #  id                     :bigint           not null, primary key
 #  provider               :string           default("email"), not null
 #  uid                    :string           default(""), not null
