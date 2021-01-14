@@ -67,10 +67,18 @@ I was add fake data for 2 users
 
 ## Send Message To User
 `:id` is value of slug of attribute user
-```curl -X POST -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -i 'http://10.221.104.165:3000/api/v1/send_message/:id' --data '{"message":"masuk pak eko"}'```
+```curl "http://10.221.104.165:3000/api/v1/send_message/1610558990301157-3e98ab05-ad63-423c-8336-f51fe167582b" \
+  -X POST \
+  -d {"_arcMeta":{"textParts":["message"]}} \
+  -H "Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryjmefwQAoMwgFsGh4" \
+  -H "access-token: T7g9fqUw7JC6qjcUnhyhWg" \
+  -H "uid: markonah@mail.com" \
+  -H "client: NkR6AApn91wybpEdhrpAXA" ```
+on body you can add attachments and a message but with name of field is attachment[number array] and change to input file. i use advance rest client by the way
 
 ## Get Conversations and count unread message and preview that message from Users
-```curl -X GET -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -i 'http://10.221.104.165:3000/api/v1/conversations'```
+```curl -X GET -H 'access-token: oyeSlbb_KvJgD7eXr_V8qg' -H 'client: suJtbAMNH0yf-C0K0I8cjA' -H 'uid: daniela@zemlak.io' -H 'Content-Type: application/json' -i 'http://10.221.104.165:3000/api/v1/
+conversations'```
 
 ## Get Conversation of User and Change unread message to readed is true
 `:id` is value of slug of attribute conversation

@@ -8,6 +8,7 @@
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
 AddSlugToConversation	db/migrate/20210112081715_add_slug_to_conversation.rb	/^class AddSlugToConversation < ActiveRecord::Migration[6.0]$/;"	c
 AddSlugToMessage	db/migrate/20210112081728_add_slug_to_message.rb	/^class AddSlugToMessage < ActiveRecord::Migration[6.0]$/;"	c
+AddSlugToMessageAttachment	db/migrate/20210114054944_add_slug_to_message_attachment.rb	/^class AddSlugToMessageAttachment < ActiveRecord::Migration[6.0]$/;"	c
 AddSlugToUser	db/migrate/20210112081522_add_slug_to_user.rb	/^class AddSlugToUser < ActiveRecord::Migration[6.0]$/;"	c
 AddSlugToUserConversations	db/migrate/20210112081747_add_slug_to_user_conversations.rb	/^class AddSlugToUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:ChatRails
@@ -26,20 +27,21 @@ Conversation	app/models/conversation.rb	/^class Conversation < ApplicationRecord
 ConversationController	app/controllers/api/v1/ConversationController.rb	/^class Api::V1::ConversationController < ApplicationController$/;"	c	module:Api.V1
 ConversationSerializer	app/serializers/conversations/conversation_serializer.rb	/^class Conversations::ConversationSerializer$/;"	c	module:Conversations
 ConversationTest	test/models/conversation_test.rb	/^class ConversationTest < ActiveSupport::TestCase$/;"	c
+CreateActiveStorageTables	db/migrate/20210114054716_create_active_storage_tables.active_storage.rb	/^class CreateActiveStorageTables < ActiveRecord::Migration[5.2]$/;"	c
 CreateConversations	db/migrate/20201217063223_create_conversations.rb	/^class CreateConversations < ActiveRecord::Migration[6.0]$/;"	c
+CreateMessageAttachments	db/migrate/20210114054855_create_message_attachments.rb	/^class CreateMessageAttachments < ActiveRecord::Migration[6.0]$/;"	c
 CreateMessages	db/migrate/20201217063330_create_messages.rb	/^class CreateMessages < ActiveRecord::Migration[6.0]$/;"	c
 CreateUserConversations	db/migrate/20201217112351_create_user_conversations.rb	/^class CreateUserConversations < ActiveRecord::Migration[6.0]$/;"	c
 DeviseTokenAuthCreateUsers	db/migrate/20201217060606_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]$/;"	c
 Endpoints	README.md	/^# Endpoints$/;"	c
 FYI	README.md	/^## FYI$/;"	s
-Get Conversation of User and Change unread message to readed is true	README.md	/^## Get Conversation of User and Change unread message to readed is true$/;"	s
-Get Conversations and count unread message and preview that message from Users	README.md	/^## Get Conversations and count unread message and preview that message from Users$/;"	s
 Get Users	README.md	/^## Get Users$/;"	s
 Instalation	README.md	/^## Instalation$/;"	s
 Lets Get Started It!	README.md	/^# Lets Get Started It!$/;"	c
 Message	app/models/message.rb	/^class Message < ApplicationRecord$/;"	c
 MessageAttachment	app/models/message_attachment.rb	/^class MessageAttachment < ApplicationRecord$/;"	c
 MessageAttachmentSerializer	app/serializers/message_attachment_serializer.rb	/^class MessageAttachmentSerializer$/;"	c
+MessageAttachmentTest	test/models/message_attachment_test.rb	/^class MessageAttachmentTest < ActiveSupport::TestCase$/;"	c
 MessageBroadCastJob	app/jobs/message_broad_cast_job.rb	/^class MessageBroadCastJob < ApplicationJob$/;"	c
 MessageBroadCastJobTest	test/jobs/message_broad_cast_job_test.rb	/^class MessageBroadCastJobTest < ActiveJob::TestCase$/;"	c
 MessageChannel	app/channels/message_channel.rb	/^class MessageChannel < ApplicationCable::Channel$/;"	c
@@ -82,6 +84,9 @@ change	db/migrate/20210112081522_add_slug_to_user.rb	/^  def change$/;"	f	class:
 change	db/migrate/20210112081715_add_slug_to_conversation.rb	/^  def change$/;"	f	class:AddSlugToConversation
 change	db/migrate/20210112081728_add_slug_to_message.rb	/^  def change$/;"	f	class:AddSlugToMessage
 change	db/migrate/20210112081747_add_slug_to_user_conversations.rb	/^  def change$/;"	f	class:AddSlugToUserConversations
+change	db/migrate/20210114054716_create_active_storage_tables.active_storage.rb	/^  def change$/;"	f	class:CreateActiveStorageTables
+change	db/migrate/20210114054855_create_message_attachments.rb	/^  def change$/;"	f	class:CreateMessageAttachments
+change	db/migrate/20210114054944_add_slug_to_message_attachment.rb	/^  def change$/;"	f	class:AddSlugToMessageAttachment
 cli_arg_version	bin/bundle	/^  def cli_arg_version$/;"	f
 connect	app/channels/application_cable/connection.rb	/^    def connect$/;"	f	class:ApplicationCable.Connection
 conversation_exist	app/services/messages_services/send_message.rb	/^    def conversation_exist$/;"	f	class:MessagesServices.SendMessage
