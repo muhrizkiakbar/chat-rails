@@ -1,10 +1,10 @@
 module MessagesServices
   class SendMessage < ApplicationService
 
-    def initialize user_sender, user_recipient, message
+    def initialize user_sender, user_recipient, params
       @user_sender = (user_sender)
       @user_recipient = (user_recipient)
-      @message = message
+      @params = params
     end
 
     def call
@@ -52,8 +52,17 @@ module MessagesServices
       @result_message = Message.create({
         conversation: conversation,
         user: user,
-        message: @message
+        message: @params[:message]
       })
+
+
+
+      @params[:attachments].each do |attachment|
+        attachment = MessageAttachment.create({
+          message: @result_message,
+          attachment: attachment[1]
+        })
+      end
       
       if !@conversation.nil?
         change_updated_conversation = Conversation.find(conversation.id)

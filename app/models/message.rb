@@ -18,6 +18,8 @@ class Message < ApplicationRecord
   belongs_to :conversation
   belongs_to :user
 
+  has_many :message_attachments
+
   validates :message, presence: true
 
   #after_create_commit :send_channel

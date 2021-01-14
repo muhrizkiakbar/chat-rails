@@ -38,6 +38,8 @@ Get Users	README.md	/^## Get Users$/;"	s
 Instalation	README.md	/^## Instalation$/;"	s
 Lets Get Started It!	README.md	/^# Lets Get Started It!$/;"	c
 Message	app/models/message.rb	/^class Message < ApplicationRecord$/;"	c
+MessageAttachment	app/models/message_attachment.rb	/^class MessageAttachment < ApplicationRecord$/;"	c
+MessageAttachmentSerializer	app/serializers/message_attachment_serializer.rb	/^class MessageAttachmentSerializer$/;"	c
 MessageBroadCastJob	app/jobs/message_broad_cast_job.rb	/^class MessageBroadCastJob < ApplicationJob$/;"	c
 MessageBroadCastJobTest	test/jobs/message_broad_cast_job_test.rb	/^class MessageBroadCastJobTest < ActiveJob::TestCase$/;"	c
 MessageChannel	app/channels/message_channel.rb	/^class MessageChannel < ApplicationCable::Channel$/;"	c
@@ -66,6 +68,7 @@ UserSerializer	app/serializers/user_serializer.rb	/^class UserSerializer$/;"	c
 activate_bundler	bin/bundle	/^  def activate_bundler$/;"	f
 activation_error_handling	bin/bundle	/^  def activation_error_handling$/;"	f
 add_conversation	app/services/messages_services/send_message.rb	/^    def add_conversation$/;"	f	class:MessagesServices.SendMessage
+attachment_url	app/models/message_attachment.rb	/^  def attachment_url$/;"	f	class:MessageAttachment
 build_conversation	app/jobs/message_broad_cast_job.rb	/^  def build_conversation(id)$/;"	f	class:MessageBroadCastJob
 bundler_requirement	bin/bundle	/^  def bundler_requirement$/;"	f
 bundler_version	bin/bundle	/^  def bundler_version$/;"	f
@@ -95,7 +98,7 @@ get_convo	app/channels/message_channel.rb	/^  def get_convo(conversation)$/;"	f	
 get_sender	app/channels/message_channel.rb	/^  def get_sender(user)$/;"	f	class:MessageChannel
 index	app/controllers/api/v1/ConversationController.rb	/^  def index$/;"	f	class:ConversationController
 index	app/controllers/api/v1/UserController.rb	/^  def index$/;"	f	class:UserController
-initialize	app/services/messages_services/send_message.rb	/^    def initialize user_sender, user_recipient, message$/;"	f	class:MessagesServices.SendMessage
+initialize	app/services/messages_services/send_message.rb	/^    def initialize user_sender, user_recipient, params$/;"	f	class:MessagesServices.SendMessage
 invoked_as_script?	bin/bundle	/^  def invoked_as_script?$/;"	f
 load_bundler!	bin/bundle	/^  def load_bundler!$/;"	f
 lockfile	bin/bundle	/^  def lockfile$/;"	f

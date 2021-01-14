@@ -10,5 +10,5 @@ class Conversations::ConversationSerializer
       } 
   } 
   #has_many :users
-  has_many :messages, serializer: Conversations::MessageSerializer
+  has_many :messages
 end

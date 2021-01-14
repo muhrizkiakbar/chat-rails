@@ -22,7 +22,7 @@ class Api::V1::ConversationController < ApplicationController
       readed_message.readed = true
       readed_message.save
     end
-    render json: Conversations::ConversationSerializer.new(@conversation, {params: {current_api_user: current_api_user}, include: [:messages]}).serializable_hash
+    render json: Conversations::ConversationSerializer.new(@conversation, {params: {current_api_user: current_api_user}, include: [:messages, 'messages.message_attachments']}).serializable_hash
   end
 
   def destroy

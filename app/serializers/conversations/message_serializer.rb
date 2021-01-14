@@ -16,4 +16,11 @@ class Conversations::MessageSerializer
 
   #belongs_to :conversation
   belongs_to :user, serializer: Conversations::UserSerializer
+  has_many :message_attachments, serializer: MessageAttachmentSerializer 
+  #has_many :message_attachments, serializer: MessageAttachmentSerializer, meta: Proc.new {|message, params| 
+    #{
+      #:attachment_url => message.message_attachments.attachment_url
+    #}
+  #}
+
 end

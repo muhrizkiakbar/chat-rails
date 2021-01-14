@@ -70,3 +70,6 @@ gem 'bcrypt'
 gem "anycable-rails"
 
 gem 'friendly_id', '~> 5.4.0'
+
+gem "paperclip", "~> 6.0.0"
+gem 'file_validators'
